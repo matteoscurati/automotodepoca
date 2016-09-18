@@ -1,0 +1,50 @@
+.menu
+  margin-top: 50px
+  border-top: 10px solid $yellow
+  background-color: $black
+  color: white
+  +heading-font-family
+  text-transform: uppercase
+  transition: all 0.5s ease-in-out
+
+  &.smaller
+
+    +at-breakpoint(lap)
+      position: fixed
+      width: 100%
+      top: 0
+      left: 0
+      border-top: none
+      transition: all 0.5s ease-in-out
+      border-bottom: 1px solid $yellow
+
+      .menu__logo
+        background-image: image-url('logo__bianco.jpg')
+        height: 5em
+        width: 5em
+        +vertical-margin(0.5)
+
+.menu__nav
+  text-align: center
+
+  +at-breakpoint(lap)
+    text-align: right
+
+.menu__logo
+  text-align: center
+  +margin-bottom(1.5)
+  background-image: image-url('logo__black.jpg')
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center center
+  height: 8em
+  width: 8em
+  transition: all 0.5s ease-in-out
+  margin-left: auto
+  margin-right: auto
+
+  +at-breakpoint(lap)
+    text-align: left
+    margin-bottom: 0
+    margin-left: 0
+    margin-right: 0
