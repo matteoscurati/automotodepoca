@@ -1,9 +1,11 @@
 .hero
   background-repeat: no-repeat
   background-position: center center
-  background-color: $light-bg-color
+  background-color: $black
   background-size: cover
   position: relative
+  background-image: image-url('testata.jpg')
+  color: white
 
 .hero__body
   display: table
@@ -13,11 +15,20 @@
 .hero__body__inner
   display: table-cell
   vertical-align: middle
-  +vertical-padding(4)
+  +vertical-padding(8)
+
+  +at-breakpoint(tab)
+    +vertical-padding(8)
+
+  +at-breakpoint(lap)
+    +vertical-padding(9)
+
+  +at-breakpoint(desk)
+    +vertical-padding(15)
 
 .hero__heading
   +heading-font-family
-  +font-size(alpha)
+  +font-size(mega)
   line-height: 1.2
   margin-left: auto
   margin-right: auto
@@ -45,4 +56,3 @@
 +at-breakpoint(desk)
   .hero__heading
     +font-size(40px)
-
