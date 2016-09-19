@@ -8,13 +8,15 @@
   transition: all 0.5s ease-in-out
   z-index: 15
 
+  +at-breakpoint(lap)
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+
   &.smaller
 
     +at-breakpoint(lap)
-      position: fixed
-      width: 100%
-      top: 0
-      left: 0
       border-top: none
       transition: all 0.5s ease-in-out
       border-bottom: 1px solid $yellow

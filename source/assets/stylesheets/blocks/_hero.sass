@@ -6,6 +6,10 @@
   position: relative
   background-image: image-url('testata.jpg')
   color: white
+  margin-top: 0
+
+  +at-breakpoint(lap)
+    margin-top: 130px
 
 .hero__body
   display: table
@@ -15,32 +19,34 @@
 .hero__body__inner
   display: table-cell
   vertical-align: middle
-  +vertical-padding(8)
+  +vertical-padding(7)
 
   +at-breakpoint(tab)
-    +vertical-padding(8)
+    +vertical-padding(6)
 
   +at-breakpoint(lap)
-    +vertical-padding(9)
+    +vertical-padding(8)
 
   +at-breakpoint(desk)
-    +vertical-padding(15)
+    +vertical-padding(10)
 
 .hero__heading
   +heading-font-family
-  +font-size(mega)
+  +font-size(iper)
   line-height: 1.2
   margin-left: auto
   margin-right: auto
   max-width: 800px
+  text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black
 
 .hero__text
   +heading-font-family
-  +font-size(gamma)
+  +font-size(alpha)
   +margin-top(2)
   max-width: 750px
   margin-left: auto
   margin-right: auto
+  text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black
 
 .hero__actions
   +margin-top(2)
@@ -52,7 +58,3 @@
 
   .hero__text a
     color: white
-
-+at-breakpoint(desk)
-  .hero__heading
-    +font-size(40px)

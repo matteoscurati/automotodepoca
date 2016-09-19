@@ -1,6 +1,7 @@
 import $ from 'jQuery';
 import classie from 'desandro-classie';
 import smoothScroll from 'smooth-scroll';
+import './vendor/player.js.es6';
 
 require('jquery-ui');
 require('modernizr');
