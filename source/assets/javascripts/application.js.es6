@@ -5,11 +5,17 @@ import './vendor/player.js.es6';
 
 require('jquery-ui');
 require('modernizr');
+require('wow');
 
 $(document).ready(() => {
   smoothScroll.init({
     //offset: 130
   });
+});
+
+$(document).ready(() => {
+  new WOW().init();
+  const wow = new WOW({});
 });
 
 function init() {
