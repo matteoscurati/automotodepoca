@@ -5,6 +5,8 @@
 .nav__item
   @extend %nav-item
   +padding-left(1)
+  +padding-right(1)
+  border-right: 1px solid $white
 
   &:before
     content: "\00A0"
@@ -21,6 +23,9 @@
 
   &:first-child
     +padding-left(0)
+
+  &:last-child
+    border-right: none
 
 .nav--dots
   .nav__item:before

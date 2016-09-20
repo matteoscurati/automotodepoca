@@ -1,12 +1,13 @@
 .menu
   margin-top: 50px
-  border-top: 10px solid $yellow
+  border-top: 35px solid $yellow
   background-color: $black
   color: white
   +heading-font-family
   text-transform: uppercase
   transition: all 0.5s ease-in-out
   z-index: 15
+  font-weight: 500
 
   +at-breakpoint(lap)
     position: fixed
@@ -17,7 +18,7 @@
   &.smaller
 
     +at-breakpoint(lap)
-      border-top: none
+      border-top: 1px solid $black
       transition: all 0.5s ease-in-out
       border-bottom: 1px solid $yellow
 
@@ -28,9 +29,16 @@
         +vertical-margin(0.5)
 
       .menu__info
-        +padding-left(0)
+        +padding-left(0.5)
         +font-size(epsilon)
         line-height: 1.2
+
+      .menu__when
+        font-size: 22px
+        +margin-bottom(0)
+
+      .menu__location
+        font-size: 15px
 
 .menu__nav
   text-align: center
@@ -45,27 +53,44 @@
   background-size: contain
   background-repeat: no-repeat
   background-position: center center
-  height: 6em
-  width: 6em
+  height: 131px
+  width: 140px
   transition: all 0.5s ease-in-out
   margin-left: auto
   margin-right: auto
+  display: block
+  margin-top: -25px
 
   +at-breakpoint(lap)
     text-align: left
-    margin-bottom: 0
+    +margin-bottom(1)
     margin-left: 0
     margin-right: 0
+    display: inline-block
+    vertical-align: middle
 
 .menu__info
   text-align: center
   text-transform: uppercase
   +margin-bottom(1)
   transition: all 0.5s ease-in-out
+  display: block
+  font-weight: 500
+  letter-spacing: 0.5px
 
   +at-breakpoint(lap)
     text-align: left
     +padding-left(0.8)
     +margin-bottom(0)
-    +font-size(delta)
     line-height: 1.2
+    display: inline-block
+    vertical-align: middle
+
+.menu__when
+  font-size: 25px
+  +margin-bottom(0.3)
+  transition: all 0.5s ease-in-out
+
+.menu__location
+  font-size: 18px
+  transition: all 0.5s ease-in-out
