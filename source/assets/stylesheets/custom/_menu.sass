@@ -27,6 +27,11 @@
         width: 4em
         +vertical-margin(0.5)
 
+      .menu__info
+        +padding-left(0)
+        +font-size(epsilon)
+        line-height: 1.2
+
 .menu__nav
   text-align: center
 
@@ -51,3 +56,16 @@
     margin-bottom: 0
     margin-left: 0
     margin-right: 0
+
+.menu__info
+  text-align: center
+  text-transform: uppercase
+  +margin-bottom(1)
+  transition: all 0.5s ease-in-out
+
+  +at-breakpoint(lap)
+    text-align: left
+    +padding-left(0.8)
+    +margin-bottom(0)
+    +font-size(delta)
+    line-height: 1.2
