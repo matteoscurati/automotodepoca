@@ -2,11 +2,11 @@
   .autos__body
     .wrap
       .grid
-        - 4.times do
+        - data.autos.auto.each do |a|
           .grid__item.width-12-12.lap-6-12
             .autos__item.wow.zoomIn
-              .autos__video data-type="vimeo" data-video-id="143418951"
+              .autos__video data-type="vimeo" data-video-id="#{a.video}"
               .autos__title
-                h2 = lorem.words 5
+                h2 = a.title
               .autos__text
-                p = lorem.paragraph
+                p = a.text
