@@ -9,7 +9,7 @@ require('wow');
 
 $(document).ready(() => {
   smoothScroll.init({
-    //offset: 130
+    offset: 200
   });
 });
 
