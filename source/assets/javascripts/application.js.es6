@@ -34,3 +34,12 @@ function init() {
 }
 
 window.onload = init();
+
+function randomize() {
+var ul = document.querySelector('#randomize');
+for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
+}
+};
+
+window.onload = randomize();
